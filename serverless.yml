@@ -1,0 +1,15 @@
+service: ffmpeg-layer
+
+frameworkVersion: "2"
+
+provider:
+  name: aws
+  region: eu-west-1
+
+layers:
+  ffmpegPython37:
+    path: layer
+    compatibleRuntimes:
+      - python3.7
+      - python3.8
+    description: "Lambda layer for FFmpeg library"
